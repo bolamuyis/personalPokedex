@@ -11,6 +11,12 @@ p {
   text-align: center;
   line-height: 1em; }
 
+footer {
+  text-align: center;
+  line-height: .75em;
+  color: #c6c6c6;
+  padding: 1em; }
+
 .value {
   display: block;
   font-weight: bolder; }
