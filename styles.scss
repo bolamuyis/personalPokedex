@@ -6,7 +6,6 @@
 p {
     background-color: rgb(252, 212, 91);
     color: rgb(84, 88, 92);
-    // white-space: nowrap;
     padding: .2em;
     border-radius: 1em;
     text-transform: uppercase;
@@ -24,10 +23,6 @@ footer {
     display: block;
     font-weight: bolder;
 }
-#electivire {
-    font-size: 1.25em;
-    border-radius: 1em;
-}
 ul {
     margin: 0;
     padding: 0;
@@ -42,6 +37,28 @@ ul {
 .card .first {
     opacity: 0;
 }
+
+#cardContainer {
+    font-size: 1.25em;
+    border-radius: 1em;
+    animation: opacity-ani;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+#cardContainer:nth-last-child(1) {
+    visibility: hidden;
+    padding: 100px;
+}
+@keyframes opacity-ani {
+    from {     
+        opacity: 0;
+        left: 1500px;   
+      }   
+    to {     
+        opacity:1;
+        left: 0;   
+    }
+}
 .jumbotron {
     padding: 0;
     margin: 20px 0;
@@ -49,4 +66,20 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.logo .jumbotron img {
+    position: relative;
+    left: -600px;
+    animation: poke;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+@keyframes poke {
+    from {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        left: 0;
+    }
 }
