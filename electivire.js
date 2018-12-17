@@ -7,6 +7,7 @@ axios.get("https://pokeapi.co/api/v2/pokemon/466/")
     const data = response.data;
     console.log(data);
 
+<<<<<<< HEAD
 // Capture all the indexes of abilities in to this array
 var abilitiesArray = [];
 for (let i=0; i<data.abilities.length; i++){
@@ -16,6 +17,18 @@ for (let i=0; i<data.abilities.length; i++){
 let electivire = new Pokemon(
     data.forms[0].name,
     //data.abilities[0].ability.name,
+=======
+//declare and empty array to capture all the abilities
+var abilitiesArray = [];
+
+// Create a loop that brings in all the abilities data
+for (let i=0; i<data.abilities.length; i++){
+    abilitiesArray.push(data.abilities[i].ability.name);
+}
+let electivire = new Pokemon(
+    data.forms[0].name,
+    // data.abilities[0].ability.name,
+>>>>>>> master
     abilitiesArray,
     data.stats[4].base_stat,
     data.stats[3].base_stat,
@@ -27,4 +40,8 @@ let electivire = new Pokemon(
     document.getElementById("electivire").innerHTML += `<p><span class="key">${"Attack" }<span class="value"><strong>${ electivire.attack }</strong></span></p>`
     document.getElementById("electivire").innerHTML += `<p><span class="key">${"Defense" }<span class="value"><strong>${ electivire.defense}</strong></span></p>`
     document.getElementById("electivire").innerHTML += `<p><span class="key">${"HP" }<span class="value"><strong>${ electivire.hp }</strong></span></p>`
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> master

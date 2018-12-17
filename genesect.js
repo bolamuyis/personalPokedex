@@ -5,14 +5,24 @@ document.body.style.backgroundImage = "url('images/genesect-bg.png')";
 axios.get("https://pokeapi.co/api/v2/pokemon/649/")
 .then((response) => {
     const data = response.data;
-    console.log(data);
+    console.log(data); 
 
+<<<<<<< HEAD
 // Capture all the indexes of abilities in to this array
 var abilitiesArray = [];
 for (let i=0; i<data.abilities.length; i++){
     abilitiesArray.push(data.abilities[i].ability.name);
 } 
 
+=======
+//declare and empty array to capture all the abilities
+var abilitiesArray = [];
+
+// Create a loop that brings in all the abilities data
+for (let i=0; i<data.abilities.length; i++){
+    abilitiesArray.push(data.abilities[i].ability.name);
+}
+>>>>>>> master
 let electivire = new Pokemon(
     data.forms[0].name,
     //data.abilities[0].ability.name,
