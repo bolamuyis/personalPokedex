@@ -40,7 +40,8 @@ ul {
   border-radius: 1em;
   animation: opacity-ani;
   animation-duration: 2s;
-  animation-fill-mode: forwards; }
+  animation-fill-mode: forwards;
+  margin: 0 0 2rem 0; }
 
 #cardContainer:nth-last-child(1) {
   visibility: hidden;
@@ -74,5 +75,24 @@ ul {
   100% {
     opacity: 1;
     left: 0; } }
+@media (max-width: 500px) {
+  footer {
+    font-size: 1em;
+    line-height: 1.5em; }
+
+  #cardContainer {
+    margin: 0 0 .75rem 0; }
+
+  #cardContainer:nth-last-child(1) {
+    position: absolute;
+    top: 200px;
+    z-index: -1; } }
+@media (min-width: 501px) and (max-width: 701px) {
+  footer {
+    font-size: 1em;
+    line-height: 1.5em; }
+
+  #cardContainer {
+    margin: 0 0 2em 0; } }
 
 /*# sourceMappingURL=styles.css.map */
